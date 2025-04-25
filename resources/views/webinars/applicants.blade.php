@@ -58,8 +58,8 @@
                             <td>{{ $applicant->name }}</td>
                             <td>{{ $applicant->email }}</td>
                             <td>
-                                <span class="badge bg-{{ $applicant->pivot->status == 'approved' ? 'success' : ($applicant->pivot->status == 'rejected' ? 'danger' : 'warning') }}">
-                                    {{ ucfirst($applicant->pivot->status) }}
+                                <span class="badge bg-{{ ($applicant->pivot->status == 'approved' && false) ? 'success' : ($applicant->pivot->status == 'rejected' ? 'danger' : 'warning') }}">
+                                    {{ 'Pending' }}
                                 </span>
                             </td>
                             <td>
